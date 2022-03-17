@@ -1,0 +1,91 @@
+@import '../base/vars';
+
+.schedule {
+    background-color: #2c2f33;
+    box-shadow: 14px 14px 40px rgba(16, 16, 18, 0.75), -7px -7px 30px #262e32;
+    border-radius: vw(8);
+    padding: vw(25) vw(20) vw(15) vw(25);
+
+    @media (max-width: 1024px) {
+        border-radius: 8px;
+        padding: 25px 20px;
+    }
+
+    // .schedule__list
+
+    &__list {
+        display: grid;
+        grid-gap: vw(35);
+
+        @media (max-width: 1024px) {
+            grid-gap: 25px;
+        }
+    }
+
+    // .schedule__item
+
+    &__item {
+        @extend %vertical-align;
+    }
+
+    // .schedule__item-img
+
+    &__item-img {
+        width: vw(64);
+        height: vw(64);
+        flex-shrink: 0;
+        margin-right: vw(8);
+        background-color: #2c2f33;
+        box-shadow: inset -12.446px -12.446px 31.1151px #3b4451, inset 12.446px 12.446px 31.1151px #000;
+        border-radius: vw(248.921);
+        @extend %flex-center;
+
+        img {
+            width: vw(53.25);
+            height: vw(53.25);
+            border-radius: vw(248.921);
+
+            @media (max-width: 1024px) {
+                width: 50px;
+                height: 50px;
+                border-radius: 248.921px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            width: 60px;
+            height: 60px;
+            border-radius: 248.921px;
+            margin-right: 8px;
+        }
+    }
+
+    // .schedule__item-time
+
+    &__item-time {
+        @extend %text-10;
+        margin-bottom: vw(4);
+
+        @media (max-width: 1024px) {
+            margin-bottom: 4px;
+        }
+    }
+
+    // .schedule__item-title
+
+    &__item-title {
+        @extend %text-12;
+        flex: 1 1 auto;
+        margin-bottom: vw(14);
+
+        @media (max-width: 1024px) {
+            margin-bottom: 14px;
+        }
+    }
+
+    // .schedule__item-place
+
+    &__item-place {
+        @extend %text-10;
+    }
+}

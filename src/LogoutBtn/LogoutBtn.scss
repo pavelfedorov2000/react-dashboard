@@ -1,0 +1,19 @@
+@import '../base/vars';
+
+.logout-btn {
+    flex-shrink: 0;
+    box-shadow: inset -6.22302px -6.22302px 6.22302px #3b4451, inset 3.73381px 3.73381px 6.22302px #000;
+
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: -6.22302px -6.22302px 18.6691px #3b4451, 6.22302px 6.22302px 18.6691px #000;
+        }
+    }
+
+    img {
+        @media (min-width: 1025px) {
+            width: vw(35);
+            height: vw(35);
+        }
+    }
+}

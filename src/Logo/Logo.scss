@@ -1,0 +1,45 @@
+@import '../base/vars';
+
+.logo {
+    @media (min-width: 1025px) {
+        position: fixed;
+        top: vw(19);
+        left: vw(21);
+    }
+
+    width: vw(105);
+    height: vw(90);
+    background-color: #144884;
+    box-shadow: -6.22302px -6.22302px 18.6691px #3b4451, 6.22302px 6.22302px 18.6691px #000;
+    border-radius: vw(24.8921);
+    @extend %flex-center;
+
+    @media (max-width: 1024px) {
+        width: 105px;
+        height: 90px;
+        border-radius: 24.8921px;
+    }
+
+    @media (max-width: 767px) {
+        width: 80px;
+        height: 65px;
+    }
+
+    // .logo__img
+
+    &__img {
+        width: vw(83);
+        height: vw(57);
+        object-fit: contain;
+
+        @media (max-width: 1024px) {
+            width: auto;
+            height: auto;
+        }
+
+        @media (max-width: 767px) {
+            width: 60px;
+            height: 35px;
+        }
+    }
+}

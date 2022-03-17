@@ -1,0 +1,37 @@
+@import '../base/vars';
+
+.user-select {
+    width: vw(274);
+    height: vw(60);
+    background-color: #2c2f33;
+    border: none;
+    box-shadow: -5px -5px 15px #3b4451, 5px 5px 15px #000;
+    border-radius: vw(124.46);
+    @extend %vertical-align;
+    padding-left: vw(36);
+    font-weight: 500;
+    font-size: vw(22.4029);
+    line-height: 27 / 22.4029 * 100%;
+    color: #eee;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-size: vw(14) vw(9);
+    background-position: calc(100% - 31 * 100vw / 1920) 50%;
+    background-repeat: no-repeat;
+    outline: none;
+
+    @media (max-width: 1024px) {
+        width: 274px;
+        height: 60px;
+        border-radius: 124.46px;
+        padding-left: 30px;
+        font-size: 20px;
+        line-height: 25px;
+        background-size: 14px 9px;
+        background-position-x: calc(100% - 30px);
+    }
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+}

@@ -1,19 +1,31 @@
+* {
+    box-sizing: inherit;
+
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+html {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     min-width: 320px;
     font-family: 'Montserrat', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
     font-weight: 400;
+    background-color: $dark;
     color: #fff;
-    background-color: #2C2F33;
-}
 
-/* body.hidden {
-    overflow-y: hidden;
-} */
+    &._locked {
+        overflow-y: hidden;
+    }
+}
 
 h1,
 h2,
@@ -23,6 +35,15 @@ h5,
 h6,
 p {
     margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
 }
 
 ol,
@@ -55,6 +76,14 @@ input {
 
 input {
     cursor: default;
+}
+
+textarea {
+    resize: none;
+}
+
+address {
+    font-style: normal;
 }
 
 img {

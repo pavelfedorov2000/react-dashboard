@@ -1,0 +1,97 @@
+@import '../base/vars';
+
+.recent-projects {
+    @media (max-width: 767px) {
+        padding-bottom: 20px;
+        display: none;
+    }
+}
+
+.recent-projects-table {
+    @extend %text-14;
+
+    // .recent-projects-table__head
+
+    &__head {
+        display: grid;
+        grid-template-columns:
+            vw(180) minmax(vw(92), max-content) minmax(vw(105), max-content) minmax(vw(98), max-content)
+            minmax(vw(73), max-content);
+        justify-content: space-between;
+        padding-left: vw(40);
+        padding-right: vw(42);
+        margin-bottom: vw(20);
+
+        @media (max-width: 1024px) {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 15px;
+            grid-template-columns: 150px minmax(85px, max-content) minmax(100px, max-content) minmax(90px, max-content) minmax(
+                    70px,
+                    max-content
+                );
+        }
+
+        @media (max-width: 767px) {
+            overflow-x: auto;
+        }
+    }
+
+    // .recent-projects-table__title
+
+    &__title {
+        font-weight: 600;
+        color: #c8d3f1;
+        text-transform: uppercase;
+    }
+
+    // .recent-projects-table__rows
+
+    &__rows {
+        display: grid;
+        row-gap: vw(25);
+
+        @media (max-width: 1024px) {
+            row-gap: 25px;
+        }
+
+        @media (max-width: 767px) {
+            overflow-x: auto;
+        }
+    }
+
+    // .recent-projects-table__row
+
+    &__row {
+        display: grid;
+        grid-template-columns:
+            vw(180) minmax(vw(92), max-content) minmax(vw(105), max-content) minmax(vw(98), max-content)
+            minmax(vw(73), max-content);
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+        padding: vw(12) vw(42) vw(12) vw(32);
+        box-shadow: -6.22302px -6.22302px 18.6691px #3b4451, 6.22302px 6.22302px 18.6691px #000;
+        border-radius: vw(24.8921);
+
+        @media (max-width: 1024px) {
+            font-size: 12px;
+            line-height: 15px;
+            padding: 10px 15px;
+            border-radius: 24.8921px;
+            grid-template-columns: 150px minmax(85px, max-content) minmax(100px, max-content) minmax(90px, max-content) minmax(
+                    70px,
+                    max-content
+                );
+        }
+    }
+}
+
+.recent-project {
+    &__logo {
+        img {
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+}

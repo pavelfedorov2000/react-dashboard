@@ -1,0 +1,44 @@
+@import '../base/vars';
+
+.nav-btn {
+    width: vw(90);
+    height: vw(90);
+    background-color: #2c2f33;
+    box-shadow: -6.22302px -6.22302px 18.6691px #3b4451, 6.22302px 6.22302px 18.6691px #000;
+    border-radius: vw(12.446);
+    @extend %flex-center;
+    transition: 0.3s box-shadow;
+
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: inset -6.22302px -6.22302px 6.22302px #3b4451, inset 3.73381px 3.73381px 6.22302px #000;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        height: 70px;
+    }
+
+    &:nth-child(3) {
+        img {
+            @media (min-width: 1025px) {
+                width: vw(51);
+                height: vw(51);
+            }
+        }
+    }
+
+    img {
+        @media (min-width: 1025px) {
+            width: vw(35);
+            height: vw(35);
+        }
+
+        object-fit: contain;
+    }
+
+    &--active {
+        box-shadow: inset -6.22302px -6.22302px 6.22302px #3b4451, inset 3.73381px 3.73381px 6.22302px #000;
+    }
+}
