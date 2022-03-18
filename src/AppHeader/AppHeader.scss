@@ -1,67 +1,71 @@
 @import '../base/vars';
 
 .header {
+  @media (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  &__inner {
+    @extend %flex-row-center;
+
+    @media (min-width: 1025px) {
+      position: relative;
+      height: vw(120);
+      padding-left: vw(290);
+      padding-right: vw(17);
+    }
+
+    &:before {
+      @media (min-width: 1025px) {
+        content: '';
+        position: absolute;
+        top: vw(-13);
+        right: vw(-16);
+        bottom: 0;
+        width: vw(1732);
+        z-index: -1;
+        background-color: #2c2f33;
+        box-shadow: -6.22302px -6.22302px 18.6691px #3b4451, 6.22302px 6.22302px 18.6691px #000;
+        border-radius: vw(24.8921);
+      }
+    }
+  }
+
+  &__user {
+    @extend %vertical-align;
+
+    @media(max-width: 1024px) {
+      padding-right: 30px;
+    }
+  }
+
+  &__avatar {
+    margin-left: vw(41);
+    margin-right: vw(30);
+
     @media (max-width: 1024px) {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px;
+      margin: 0 30px;
     }
 
-    &__inner {
-        @extend %flex-row-center;
-
-        @media (min-width: 1025px) {
-            position: relative;
-            height: vw(120);
-            padding-left: vw(290);
-            padding-right: vw(17);
-        }
-
-        &:before {
-            @media (min-width: 1025px) {
-                content: '';
-                position: absolute;
-                top: vw(-13);
-                right: vw(-16);
-                bottom: 0;
-                width: vw(1732);
-                z-index: -1;
-                background-color: #2c2f33;
-                box-shadow: -6.22302px -6.22302px 18.6691px #3b4451, 6.22302px 6.22302px 18.6691px #000;
-                border-radius: vw(24.8921);
-            }
-        }
+    @media (max-width: 575px) {
+      margin: 0 15px;
     }
+  }
 
-    &__user {
-        @extend %vertical-align;
+  // .header__nav
+
+  &__nav {
+    @media (max-width: 1024px) {
+      display: none;
     }
+  }
 
-    &__avatar {
-        margin-left: vw(41);
-        margin-right: vw(30);
-
-        @media (max-width: 1024px) {
-            margin: 0 30px;
-        }
-
-        @media (max-width: 575px) {
-            margin: 0 15px;
-        }
+  &__user-select {
+    @media (max-width: 1024px) {
+      margin-right: 30px;
     }
-
-    // .header__nav
-
-    &__nav {
-        @media (max-width: 1024px) {
-            display: none;
-        }
-    }
-
-    &__user-select {
-        @media (max-width: 1024px) {
-            margin-right: 30px;
-        }
-    }
+  }
 }
